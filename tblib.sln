@@ -8,6 +8,9 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tblib", "tblib.vcxproj", "{ED709DF4-A42C-4AE3-AD57-E23A17EBD19B}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_tblib", "test\test_tblib\test_tblib.vcxproj", "{CBAE0E66-BE8D-4A45-ADB0-AC449C7AAF80}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ED709DF4-A42C-4AE3-AD57-E23A17EBD19B} = {ED709DF4-A42C-4AE3-AD57-E23A17EBD19B}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

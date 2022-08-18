@@ -1,7 +1,7 @@
 
-#  Формат файла UnicodeData.txt ftp://ftp.unicode.org/Public/3.2-Update/UnicodeData-3.2.0.html#Case%20Mappings
+#  Р¤РѕСЂРјР°С‚ С„Р°Р№Р»Р° UnicodeData.txt ftp://ftp.unicode.org/Public/3.2-Update/UnicodeData-3.2.0.html#Case%20Mappings
 
-$basefolder = "D:\work\BOB\baselib\tblib";
+$basefolder = "..";
 $crlf="
 ";
 $config= @{
