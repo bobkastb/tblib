@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="static|Win32">
+      <Configuration>static</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="static|x64">
+      <Configuration>static</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{ED709DF4-A42C-4AE3-AD57-E23A17EBD19B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>tblib</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>tblib_n</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='static|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='static|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(SolutionDir)\$(SolutionName).def.props" Condition="exists('$(SolutionDir)\$(SolutionName).def.props')" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='static|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='static|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>D:\work\BOB\baselib\tblib-n;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='static|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='static|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\com\communication_base.cpp" />
+    <ClCompile Include="..\..\conf\jsondata_tester.cpp" />
+    <ClCompile Include="..\..\conf\json_parser.cpp" />
+    <ClCompile Include="..\..\conf\tbconf.cpp" />
+    <ClCompile Include="..\..\conf\tb_parsecmdl.cpp" />
+    <ClCompile Include="..\..\gdata\cipher\aes_128.cpp" />
+    <ClCompile Include="..\..\gdata\cipher\aes_192.cpp" />
+    <ClCompile Include="..\..\gdata\cipher\aes_256.cpp" />
+    <ClCompile Include="..\..\gdata\cipher\aes_inc.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\gdata\cipher\blockCipher.cpp" />
+    <ClCompile Include="..\..\gdata\cipher\chipher_transposition.cpp" />
+    <ClCompile Include="..\..\gdata\cipher\cipher_test.cpp" />
+    <ClCompile Include="..\..\gdata\gdata_tests.cpp" />
+    <ClCompile Include="..\..\gdata\hashes\md5.cpp" />
+    <ClCompile Include="..\..\gdata\hashes\sha256.cpp" />
+    <ClCompile Include="..\..\gdata\hash_functions.cpp" />
+    <ClCompile Include="..\..\gdata\pack\ArithmeticCoding.cpp" />
+    <ClCompile Include="..\..\gdata\pack\ArithmeticCodingMulti.cpp" />
+    <ClCompile Include="..\..\gdata\pack\ArithmeticCoding_learn.cpp" />
+    <ClCompile Include="..\..\gdata\pack\ArithmeticCoding_ngramm.cpp" />
+    <ClCompile Include="..\..\gdata\tb.convert.simplet.cpp" />
+    <ClCompile Include="..\..\gdata\tbt_locale.cpp" />
+    <ClCompile Include="..\..\gdata\tbt_locale_os.cpp" />
+    <ClCompile Include="..\..\gdata\tbt_utils.cpp" />
+    <ClCompile Include="..\..\gdata\tb_binmap.cpp" />
+    <ClCompile Include="..\..\gdata\tb_c_tools.cpp" />
+    <ClCompile Include="..\..\gdata\tb_dfa.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Speed</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='static|Win32'">Speed</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Speed</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='static|x64'">Speed</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="..\..\gdata\tb_env.cpp" />
+    <ClCompile Include="..\..\gdata\tb_string.cpp" />
+    <ClCompile Include="..\..\gdata\tmp_src.cpp" />
+    <ClCompile Include="..\..\gdata\t_array.cpp" />
+    <ClCompile Include="..\..\gdata\t_string.cpp" />
+    <ClCompile Include="..\..\tsys\cp_support.--cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='static|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\tsys\cross_sys.cpp" />
+    <ClCompile Include="..\..\tsys\systime.cpp" />
+    <ClCompile Include="..\..\tsys\tbfiles.cpp" />
+    <ClCompile Include="..\..\tsys\tblog.cpp" />
+    <ClCompile Include="..\..\tsys\tb_net.cpp" />
+    <ClCompile Include="..\..\tsys\tb_process.cpp" />
+    <ClCompile Include="..\..\tsys\tb_service.cpp" />
+    <ClCompile Include="..\..\tsys\tb_ssockets.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\com\communication_base.h" />
+    <ClInclude Include="..\..\com\hide_communication_base.h" />
+    <ClInclude Include="..\..\conf\json_parser.h" />
+    <ClInclude Include="..\..\conf\tbconf.h" />
+    <ClInclude Include="..\..\conf\tb_parsecmdl.h" />
+    <ClInclude Include="..\..\gdata\cipher\blockCipher.h" />
+    <ClInclude Include="..\..\gdata\gen_tools.h" />
+    <ClInclude Include="..\..\gdata\hash_functions.h" />
+    <ClInclude Include="..\..\gdata\pack\ArithmeticCoding.h" />
+    <ClInclude Include="..\..\gdata\pack\ArithmeticCoding_learn.h" />
+    <ClInclude Include="..\..\gdata\pack\ArithmeticCoding_ngramm.h" />
+    <ClInclude Include="..\..\gdata\pack\ArithmeticCoding_test.h" />
+    <ClInclude Include="..\..\gdata\tbt_locale.h" />
+    <ClInclude Include="..\..\gdata\tbt_strings.h" />
+    <ClInclude Include="..\..\gdata\tb_algo.h" />
+    <ClInclude Include="..\..\gdata\tb_basedtools.h" />
+    <ClInclude Include="..\..\gdata\tb_binmap.h" />
+    <ClInclude Include="..\..\gdata\tb_buffer.h" />
+    <ClInclude Include="..\..\gdata\tb_c_tools.h" />
+    <ClInclude Include="..\..\gdata\tb_dfa.h" />
+    <ClInclude Include="..\..\gdata\tb_env.h" />
+    <ClInclude Include="..\..\gdata\tb_map.h" />
+    <ClInclude Include="..\..\gdata\tb_numbers.h" />
+    <ClInclude Include="..\..\gdata\tb_parray.h" />
+    <ClInclude Include="..\..\gdata\tb_parsing.h" />
+    <ClInclude Include="..\..\gdata\tb_serialize.h" />
+    <ClInclude Include="..\..\gdata\tb_vector_cs.h" />
+    <ClInclude Include="..\..\gdata\tmp_src.h" />
+    <ClInclude Include="..\..\gdata\t_array.h" />
+    <ClInclude Include="..\..\gdata\t_string.h" />
+    <ClInclude Include="..\..\gdata\w-metadata.h" />
+    <ClInclude Include="..\..\tb_basetypes.h" />
+    <ClInclude Include="..\..\tb_exception_base.h" />
+    <ClInclude Include="..\..\tsys\cross_sys.h" />
+    <ClInclude Include="..\..\tsys\systime.h" />
+    <ClInclude Include="..\..\tsys\sys_mutex.h" />
+    <ClInclude Include="..\..\tsys\sys_resource.h" />
+    <ClInclude Include="..\..\tsys\tbfiles.h" />
+    <ClInclude Include="..\..\tsys\tb_log.h" />
+    <ClInclude Include="..\..\tsys\tb_net.h" />
+    <ClInclude Include="..\..\tsys\tb_process.h" />
+    <ClInclude Include="..\..\tsys\tb_service.h" />
+    <ClInclude Include="..\..\tsys\tb_ssockets.h" />
+    <ClInclude Include="..\..\tsys\tb_sysdecls.h" />
+    <ClInclude Include="..\..\tsys\tb_sysfun.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

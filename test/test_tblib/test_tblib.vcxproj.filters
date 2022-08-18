@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\gdata">
+      <UniqueIdentifier>{ecf2fa0e-fc2e-40ef-9134-ec125391270c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\any">
+      <UniqueIdentifier>{232f9f86-09de-49c9-b8fb-abf74670306d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\crsys">
+      <UniqueIdentifier>{7fececa5-e3ff-4e5a-8075-78441718b060}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\speedtest">
+      <UniqueIdentifier>{c6f4d50f-1356-4ed4-a4c3-57591714159d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\todo">
+      <UniqueIdentifier>{4d943caa-222d-4785-9ff8-8f9a2cdb35fe}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="test_tblib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test_gen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test_darray.cpp">
+      <Filter>Source Files\gdata</Filter>
+    </ClCompile>
+    <ClCompile Include="test_format.cpp">
+      <Filter>Source Files\gdata</Filter>
+    </ClCompile>
+    <ClCompile Include="test_stream.cpp">
+      <Filter>Source Files\gdata</Filter>
+    </ClCompile>
+    <ClCompile Include="test_string.cpp">
+      <Filter>Source Files\gdata</Filter>
+    </ClCompile>
+    <ClCompile Include="test_stdvector.cpp">
+      <Filter>Source Files\any</Filter>
+    </ClCompile>
+    <ClCompile Include="test_time.cpp">
+      <Filter>Source Files\crsys</Filter>
+    </ClCompile>
+    <ClCompile Include="test_hash.cpp">
+      <Filter>Source Files\gdata</Filter>
+    </ClCompile>
+    <ClCompile Include="test_files.cpp">
+      <Filter>Source Files\todo</Filter>
+    </ClCompile>
+    <ClCompile Include="test_binmap.cpp">
+      <Filter>Source Files\todo</Filter>
+    </ClCompile>
+    <ClCompile Include="test_mutex.cpp">
+      <Filter>Source Files\todo</Filter>
+    </ClCompile>
+    <ClCompile Include="test_sys_process.cpp">
+      <Filter>Source Files\todo</Filter>
+    </ClCompile>
+    <ClCompile Include="test_net.cpp">
+      <Filter>Source Files\todo</Filter>
+    </ClCompile>
+    <ClCompile Include="test_sys_service.cpp">
+      <Filter>Source Files\todo</Filter>
+    </ClCompile>
+    <ClCompile Include="test_parse.cpp">
+      <Filter>Source Files\todo</Filter>
+    </ClCompile>
+    <ClCompile Include="test_dfa.cpp">
+      <Filter>Source Files\todo</Filter>
+    </ClCompile>
+    <ClCompile Include="test_communication.cpp">
+      <Filter>Source Files\todo</Filter>
+    </ClCompile>
+    <ClCompile Include="speedtest_hash.cpp">
+      <Filter>Source Files\todo</Filter>
+    </ClCompile>
+    <ClCompile Include="test_env.cpp">
+      <Filter>Source Files\gdata</Filter>
+    </ClCompile>
+    <ClCompile Include="test_json.cpp">
+      <Filter>Source Files\gdata</Filter>
+    </ClCompile>
+    <ClCompile Include="test_charcodec.cpp">
+      <Filter>Source Files\gdata</Filter>
+    </ClCompile>
+    <ClCompile Include="test_tbconf.cpp">
+      <Filter>Source Files\gdata</Filter>
+    </ClCompile>
+    <ClCompile Include="test_parsecmdline.cpp">
+      <Filter>Source Files\gdata</Filter>
+    </ClCompile>
+    <ClCompile Include="test_chifer.cpp">
+      <Filter>Source Files\gdata</Filter>
+    </ClCompile>
+    <ClCompile Include="test_log.cpp">
+      <Filter>Source Files\gdata</Filter>
+    </ClCompile>
+    <ClCompile Include="test_convert.cpp">
+      <Filter>Source Files\gdata</Filter>
+    </ClCompile>
+    <ClCompile Include="test_ArithmeticCoding.cpp">
+      <Filter>Source Files\gdata</Filter>
+    </ClCompile>
+    <ClCompile Include="test_serialize.cpp">
+      <Filter>Source Files\gdata</Filter>
+    </ClCompile>
+    <ClCompile Include="test_json_validator.cpp">
+      <Filter>Source Files\todo</Filter>
+    </ClCompile>
+    <ClCompile Include="test_conf_variant.cpp">
+      <Filter>Source Files\todo</Filter>
+    </ClCompile>
+    <ClCompile Include="test_hocon_parse.cpp">
+      <Filter>Source Files\todo</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="test_darray.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="test_state.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="test_variant_h.h">
+      <Filter>Source Files\gdata</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="..\..\NatvisFile.natvis" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,68 @@
+OBJDIR_base	=/tmp/cppprj
+$(CXX)=g++
+#------------------- SETTINGS -------------
+PROJECTNAME=tblib
+TARGET=$(PROJECTNAME).a
+ 
+INCLUDES := -I. 
+ALL_SRCS = gdata/hash_functions.cpp gdata/hashes/md5.cpp gdata/hashes/sha256.cpp \
+	gdata/gdata_tests.cpp \
+	gdata/tb_binmap.cpp gdata/tb_c_tools.cpp gdata/tb_env.cpp \
+	gdata/pack/ArithmeticCoding.cpp gdata/pack/ArithmeticCoding_learn.cpp gdata/pack/ArithmeticCoding_ngramm.cpp gdata/pack/ArithmeticCodingMulti.cpp\
+	gdata/tb.convert.simplet.cpp\
+	gdata/cipher/aes_128.cpp gdata/cipher/aes_192.cpp gdata/cipher/aes_256.cpp gdata/cipher/blockCipher.cpp	gdata/cipher/chipher_transposition.cpp  gdata/cipher/cipher_test.cpp\
+	conf/json_parser.cpp conf/tb_parsecmdl.cpp conf/tbconf.cpp conf/jsondata_tester.cpp\
+	gdata/tb_dfa.cpp\
+	com/communication_base.cpp\
+	tsys/cross_sys.cpp tsys/systime.cpp tsys/tb_net.cpp tsys/tb_process.cpp tsys/tb_service.cpp tsys/tb_ssockets.cpp tsys/tbfiles.cpp\
+	tsys/tblog.cpp\
+	gdata/tbt_utils.cpp gdata/tb_string.cpp gdata/tbt_locale.cpp
+#
+
+
+#HEADERS=	global_params.h 
+
+#CUDA_GENCODE ?=  -gencode=arch=compute_20,code=\"sm_20,compute_20\"  -gencode=arch=compute_10,code=\"sm_10,compute_10\"
+#CUDA_GENCODE =  -gencode=arch=compute_20,code=\"sm_20,compute_20\"  
+
+
+#include ../../common.mk
+#-------------------------------------------
+OBJDIR = $(OBJDIR_base)/$(PROJECTNAME)
+FTARGET = $(OBJDIR_base)/libs/$(TARGET)
+CPP_SRC = $(filter %.c %.cpp,$(ALL_SRCS))
+ObjfromSource=$(patsubst %, $(OBJDIR)/%.o, $(notdir $(1)))
+OBJS  =	$(call ObjfromSource,$(CPP_SRC))
+LOGFILE= $(OBJDIR)/$(PROJECTNAME)-clog.txt
+
+optionOPTIMIZE =-O2
+#-DUNIX
+COMMONFLAGS += $(INCLUDES) $(optionOPTIMIZE) -Wall
+
+TARGETDIR= $(dir $(FTARGET))
+
+
+define RULE_OBJ_CPP=
+$(2): $(1)
+	@echo ---- make $(2): $(1) == $(CXX) $(COMMONFLAGS) -o $(2) -c $(1) | tee -a $(LOGFILE)
+	$(VERBOSE)$(CXX) $(COMMONFLAGS) -o $(2) -c $(1) 2>&1 | tee -a $(LOGFILE)
+endef
+
+
+all:prepare $(FTARGET)
+prepare:
+#	@echo VPATH=$(VPATH) OBJS = $(OBJS) a=$(ALL_SRCS) dep=$(FLIBDEP)
+#	@echo INC = $(INCLUDES) 
+	$(VERBOSE)mkdir -p $(OBJDIR)
+	$(VERBOSE)mkdir -p $(TARGETDIR)
+	@echo start > $(LOGFILE)
+
+clean: 
+	rm -f -r $(OBJDIR)/*
+	
+$(FTARGET): $(OBJS) $(FLIBDEP)
+	@echo -- make lib $(FTARGET) from $(OBJS)
+	ar rcs $(FTARGET) $(OBJS)
+
+$(foreach T,$(CPP_SRC),$(eval $(call RULE_OBJ_CPP,$(T),$(call ObjfromSource,$(T)) )) )
+	

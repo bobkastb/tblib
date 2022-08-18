@@ -1,0 +1,46 @@
+
+-1) charcodec ( tbt_locale,tbt_locale_os )
++2) tb_buffer.h
++3)tb.convert.simplet.cpp
+-4) loog__DEF use tbgeneral::vformat( vaparams );
+
+tb_files.cpp -  tb_env  
+
+-------
+TODO: 
+	shift_begin
+	tbconf.cpp
+1) Что делает 	
+	+ strtype replace(const strtype & s , const char * find , const char * repl ){
+	в tbconf ???
+	+static size_t readfiletostring( const char * fn , strtype & out){
+	+atoi_t( key.c_str() ,ki ); 
+	tbconfig::get(const keytype & key )
+	RAISE(ctx.errlist.c_str());
+	strtype & operator << (strtype & s , int x)
+	
+---	D:\work\BOB\baselib\tblib-n\gdata\tbt_locale.cpp
+	stringA encode_str_to_consoleCP( stringA  s ){ -- no Const
+	
+--- D:\work\BOB\baselib\tblib-n\gdata\tb_env.cpp	c_str()
+	getEnvVar - косяк , 
+	std::getenv -> std::getenv_s
+	static int replacer(const LocalEnv & le , darray<stringA> & sd , const stringA & orgstr, stringA & result ){
+
+	
+	
+----D:\work\BOB\baselib\tblib-n\gdata\tb_string.cpp	
++ stringA replacechars( const stringA & src , const stringA & set , const stringA & repl ){
+
+
+--- D:\work\BOB\baselib\tblib-n\tsys\cross_sys.cpp  c_str()
+--- D:\work\BOB\baselib\tblib-n\tsys\tb_process.cpp  c_str()
+--- D:\work\BOB\baselib\tblib-n\tsys\tb_service.cpp  c_str()
+--- D:\work\BOB\baselib\tblib-n\tsys\tb_ssockets.cpp c_str()
+
+
++- Валится AUTOENTERG при инициализации глобальных переменных
+
++- Нужен тип вариант, с встроенным ассоц-массивом , и массивом. Имено в него надо парсить такие конструкции как json , tbconf , cmdlinepars И ДР.  
+
+- Нужен константный вариант строки для gсс . Это возможно так как запись в константную строку запрещена.

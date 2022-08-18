@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+  
+
+  <Type Name="tbgeneral::rc_array&lt;*&gt;">
+    <DisplayString Condition="fsize==0" Optional="true">NULL</DisplayString>
+    <DisplayString>[{ fsize }] {sdata,[fsize] view(simple)}</DisplayString>
+    <Expand>
+      <Item Name="[fstorage]" >fstorage</Item>
+		<Item Name="[size]" >fsize</Item>
+		<Item Name="[data]" >sdata,[fsize]</Item>
+		<IndexListItems>
+        <Size> fsize </Size>
+        <ValueNode> sdata[$i] </ValueNode>
+      </IndexListItems>
+    </Expand>
+  </Type>
+
+
+  <Type Name="tbgeneral::rc_string&lt;*&gt;">
+    <DisplayString Optional="true" Condition="sizeof(*sdata)==1" IncludeView="simple">{sdata,[fsize]s8}</DisplayString>
+    <DisplayString Optional="true" IncludeView="simple">{sdata,[fsize]}</DisplayString>
+    <DisplayString Condition="sizeof(*sdata)==1" Optional="true">{{ [{fsize}] {sdata,[fsize]s8} }}</DisplayString>
+    <DisplayString Condition="sizeof(*sdata)==2" Optional="true">{{ [{fsize}] {sdata,[fsize]} }}</DisplayString>
+    <StringView Condition="sizeof(*sdata)==1" Optional="true">sdata,[fsize] s8</StringView>
+    <StringView  Optional="true">sdata,[fsize]</StringView>
+    <Expand>
+      <Item Name="[fstorage]" >fstorage</Item>
+      <Item Name="[size]" >fsize</Item>
+      <Item Name="[data]" Condition="sizeof(*sdata)!=1">sdata</Item>
+      <Item Name="[data]" Condition="sizeof(*sdata)==1">sdata,[fsize] s8</Item>
+    </Expand>
+  </Type>
+	
+
+  <Type Name="tbgeneral::conf_variant">
+    <DisplayString Condition="type==1" Optional="true">{d.b}</DisplayString>
+    <DisplayString Condition="type==2" Optional="true">{d.i}</DisplayString>
+    <DisplayString Condition="type==3" Optional="true">{d.f}</DisplayString>
+    <DisplayString Condition="type==4" Optional="true">{d.str, view(simple)}</DisplayString>
+    <DisplayString Condition="type==5 || type==6" Optional="true">{d.node.fdata , view(simple)na}</DisplayString>
+    <Expand >
+      <ExpandedItem Condition="type==5 || type==6" Optional="true">d.node.fdata</ExpandedItem>
+      <ExpandedItem Condition="type==4" Optional="true">d.str</ExpandedItem>
+    </Expand>
+  </Type>
+
+  <Type Name="tbgeneral::conf_struct_t::r_property">
+    <DisplayString>[{key, view(simple)}]={data, view(simple)}</DisplayString>
+  </Type>
+	
+  <Type Name="tbgeneral::conf_struct_t">
+    <DisplayString Condition="stype==6" Optional="true">{a_data,view(simple)}</DisplayString>
+    <DisplayString Condition="stype==5" Optional="true">{named_props,view(simple)na}</DisplayString>
+    <Expand >
+      <Item Name="[stype]">stype</Item>
+      <Item Name="[print_option]" >print_option</Item>
+      <Item Name="[size]" > a_data.fsize+named_props.fsize </Item>
+      <ArrayItems Condition="stype==ejtArray" Optional="true">
+        <Size> a_data.fsize </Size>
+        <ValuePointer> a_data.sdata </ValuePointer>
+      </ArrayItems>
+      <CustomListItems Condition="stype==5" MaxItemsPerView="1000" Optional="true">
+        <Variable Name="i" InitialValue="0u" />
+        <Variable Name="Size" InitialValue="named_props.fsize" />
+        <Loop Condition="i &lt; Size">
+          <Item Name="[{i}] {named_props.sdata[i].key, view(simple)}"> named_props.sdata[i].data , view(simple) </Item>
+          <Exec>i++</Exec>
+        </Loop>
+      </CustomListItems>
+    </Expand>
+ </Type>
+
+
+
+</AutoVisualizer>

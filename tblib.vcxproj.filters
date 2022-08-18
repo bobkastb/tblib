@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="conf">
+      <UniqueIdentifier>{7bc2bf17-8262-4130-a534-d5d2329c24ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sys">
+      <UniqueIdentifier>{5f4b33ae-1d39-4557-aac4-9d2af25d1d5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gdata">
+      <UniqueIdentifier>{31c35212-ea88-4b0d-a0a8-4221b4c41545}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="com">
+      <UniqueIdentifier>{684175c4-25e3-4a81-8381-1ccea679661d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gdata\hashes">
+      <UniqueIdentifier>{45554336-6dd2-4f1f-977d-54ce48f6e76b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gdata\converts">
+      <UniqueIdentifier>{7d1a8a40-5fad-4788-b855-76dd53500aa3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gdata\chipher">
+      <UniqueIdentifier>{63eb04ed-6a6c-4524-927c-88d447c8a063}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gdata\pack">
+      <UniqueIdentifier>{e3bece9f-f2c0-42c7-a8db-a0cc97b0a528}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="headers">
+      <UniqueIdentifier>{a3677ddf-edac-4a4f-9bc3-3ea4040d0359}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gdata\charcodec">
+      <UniqueIdentifier>{2f771372-10a6-49f8-9102-b58ff615a647}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gdata\%40array">
+      <UniqueIdentifier>{9a4bf5f2-3b03-496f-8575-9620471a0741}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="parse">
+      <UniqueIdentifier>{448271bb-c53d-4de5-a541-1f1ee3ca964b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gdata\tests">
+      <UniqueIdentifier>{18823094-0dfb-46ba-a2bd-5a0b43a4d7c4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="conf\tbconf.cpp">
+      <Filter>conf</Filter>
+    </ClCompile>
+    <ClCompile Include="com\communication_base.cpp">
+      <Filter>com</Filter>
+    </ClCompile>
+    <ClCompile Include="gdata\hash_functions.cpp">
+      <Filter>gdata\hashes</Filter>
+    </ClCompile>
+    <ClCompile Include="gdata\hashes\md5.cpp">
+      <Filter>gdata\hashes</Filter>
+    </ClCompile>
+    <ClCompile Include="gdata\tb.convert.simplet.cpp">
+      <Filter>gdata\converts</Filter>
+    </ClCompile>
+    <ClCompile Include="gdata\hashes\sha256.cpp">
+      <Filter>gdata\hashes</Filter>
+    </ClCompile>
+    <ClCompile Include="gdata\cipher\blockCipher.cpp">
+      <Filter>gdata\chipher</Filter>
+    </ClCompile>
+    <ClCompile Include="gdata\cipher\aes_inc.hpp">
+      <Filter>gdata\chipher</Filter>
+    </ClCompile>
+    <ClCompile Include="gdata\cipher\aes_128.cpp">
+      <Filter>gdata\chipher</Filter>
+    </ClCompile>
+    <ClCompile Include="gdata\cipher\aes_192.cpp">
+      <Filter>gdata\chipher</Filter>
+    </ClCompile>
+    <ClCompile Include="gdata\cipher\aes_256.cpp">
+      <Filter>gdata\chipher</Filter>
+    </ClCompile>
+    <ClCompile Include="conf\json_parser.cpp">
+      <Filter>conf</Filter>
+    </ClCompile>
+    <ClCompile Include="conf\json_validator.cpp">
+      <Filter>conf</Filter>
+    </ClCompile>
+    <ClCompile Include="conf\tb_parsecmdl.cpp">
+      <Filter>conf</Filter>
+    </ClCompile>
+    <ClCompile Include="gdata\cipher\chipher_transposition.cpp">
+      <Filter>gdata\chipher</Filter>
+    </ClCompile>
+    <ClCompile Include="gdata\tbt_locale.cpp">
+      <Filter>gdata\charcodec</Filter>
+    </ClCompile>
+    <ClCompile Include="gdata\tbt_locale_os.cpp">
+      <Filter>gdata\charcodec</Filter>
+    </ClCompile>
+    <ClCompile Include="gdata\t_array.cpp">
+      <Filter>gdata\%40array</Filter>
+    </ClCompile>
+    <ClCompile Include="gdata\t_string.cpp">
+      <Filter>gdata\%40array</Filter>
+    </ClCompile>
+    <ClCompile Include="gdata\t_str_utils.cpp">
+      <Filter>gdata\%40array</Filter>
+    </ClCompile>
+    <ClCompile Include="gdata\pack\ArithmeticCodingMulti.cpp">
+      <Filter>gdata\pack</Filter>
+    </ClCompile>
+    <ClCompile Include="gdata\pack\ArithmeticCoding_ngramm.cpp">
+      <Filter>gdata\pack</Filter>
+    </ClCompile>
+    <ClCompile Include="gdata\pack\ArithmeticCoding_learn.cpp">
+      <Filter>gdata\pack</Filter>
+    </ClCompile>
+    <ClCompile Include="gdata\pack\ArithmeticCoding.cpp">
+      <Filter>gdata\pack</Filter>
+    </ClCompile>
+    <ClCompile Include="gdata\tb_binmap.cpp">
+      <Filter>gdata</Filter>
+    </ClCompile>
+    <ClCompile Include="gdata\tb_c_tools.cpp">
+      <Filter>gdata</Filter>
+    </ClCompile>
+    <ClCompile Include="gdata\tb_env.cpp">
+      <Filter>gdata</Filter>
+    </ClCompile>
+    <ClCompile Include="gdata\tb_string.cpp">
+      <Filter>gdata</Filter>
+    </ClCompile>
+    <ClCompile Include="gdata\tbt_utils.cpp">
+      <Filter>gdata</Filter>
+    </ClCompile>
+    <ClCompile Include="tsys\cross_sys.cpp">
+      <Filter>sys</Filter>
+    </ClCompile>
+    <ClCompile Include="tsys\systime.cpp">
+      <Filter>sys</Filter>
+    </ClCompile>
+    <ClCompile Include="tsys\tb_net.cpp">
+      <Filter>sys</Filter>
+    </ClCompile>
+    <ClCompile Include="tsys\tb_process.cpp">
+      <Filter>sys</Filter>
+    </ClCompile>
+    <ClCompile Include="tsys\tb_service.cpp">
+      <Filter>sys</Filter>
+    </ClCompile>
+    <ClCompile Include="tsys\tb_ssockets.cpp">
+      <Filter>sys</Filter>
+    </ClCompile>
+    <ClCompile Include="tsys\tbfiles.cpp">
+      <Filter>sys</Filter>
+    </ClCompile>
+    <ClCompile Include="tsys\tblog.cpp">
+      <Filter>sys</Filter>
+    </ClCompile>
+    <ClCompile Include="gdata\t_serialize.cpp">
+      <Filter>gdata</Filter>
+    </ClCompile>
+    <ClCompile Include="parse\tb_dfa.cpp">
+      <Filter>parse</Filter>
+    </ClCompile>
+    <ClCompile Include="parse\t_parse.cpp">
+      <Filter>parse</Filter>
+    </ClCompile>
+    <ClCompile Include="gdata\tests\t_tests.cpp">
+      <Filter>gdata\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="conf\conf_variant.cpp">
+      <Filter>conf</Filter>
+    </ClCompile>
+    <ClCompile Include="conf\tbcfg_parse.cpp">
+      <Filter>conf</Filter>
+    </ClCompile>
+    <ClCompile Include="conf\conf_based.cpp">
+      <Filter>conf</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="conf\tbconf.h">
+      <Filter>conf</Filter>
+    </ClInclude>
+    <ClInclude Include="conf\tb_parsecmdl.h">
+      <Filter>conf</Filter>
+    </ClInclude>
+    <ClInclude Include="com\communication_base.h">
+      <Filter>com</Filter>
+    </ClInclude>
+    <ClInclude Include="com\hide_communication_base.h">
+      <Filter>com</Filter>
+    </ClInclude>
+    <ClInclude Include="gdata\hash_functions.h">
+      <Filter>gdata\hashes</Filter>
+    </ClInclude>
+    <ClInclude Include="gdata\tb_numbers.h">
+      <Filter>gdata\converts</Filter>
+    </ClInclude>
+    <ClInclude Include="gdata\cipher\blockCipher.h">
+      <Filter>gdata\chipher</Filter>
+    </ClInclude>
+    <ClInclude Include="conf\json_parser.h">
+      <Filter>conf</Filter>
+    </ClInclude>
+    <ClInclude Include="tb_basetypes.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="tb_exception_base.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="gdata\tbt_locale.h">
+      <Filter>gdata\charcodec</Filter>
+    </ClInclude>
+    <ClInclude Include="gdata\w-metadata.h">
+      <Filter>gdata\%40array</Filter>
+    </ClInclude>
+    <ClInclude Include="gdata\t_array.h">
+      <Filter>gdata\%40array</Filter>
+    </ClInclude>
+    <ClInclude Include="gdata\t_string.h">
+      <Filter>gdata\%40array</Filter>
+    </ClInclude>
+    <ClInclude Include="gdata\t_sstream.h">
+      <Filter>gdata\%40array</Filter>
+    </ClInclude>
+    <ClInclude Include="gdata\t_format.h">
+      <Filter>gdata\%40array</Filter>
+    </ClInclude>
+    <ClInclude Include="gdata\t_sstruct.h">
+      <Filter>gdata\%40array</Filter>
+    </ClInclude>
+    <ClInclude Include="gdata\pack\ArithmeticCoding_test.h">
+      <Filter>gdata\pack</Filter>
+    </ClInclude>
+    <ClInclude Include="gdata\pack\ArithmeticCoding_ngramm.h">
+      <Filter>gdata\pack</Filter>
+    </ClInclude>
+    <ClInclude Include="gdata\pack\ArithmeticCoding_learn.h">
+      <Filter>gdata\pack</Filter>
+    </ClInclude>
+    <ClInclude Include="gdata\pack\ArithmeticCoding.h">
+      <Filter>gdata\pack</Filter>
+    </ClInclude>
+    <ClInclude Include="gdata\t_error.h">
+      <Filter>gdata\%40array</Filter>
+    </ClInclude>
+    <ClInclude Include="gdata\tb_algo.h">
+      <Filter>gdata</Filter>
+    </ClInclude>
+    <ClInclude Include="gdata\tb_basedtools.h">
+      <Filter>gdata</Filter>
+    </ClInclude>
+    <ClInclude Include="gdata\tb_binmap.h">
+      <Filter>gdata</Filter>
+    </ClInclude>
+    <ClInclude Include="gdata\tb_buffer.h">
+      <Filter>gdata</Filter>
+    </ClInclude>
+    <ClInclude Include="gdata\tb_c_tools.h">
+      <Filter>gdata</Filter>
+    </ClInclude>
+    <ClInclude Include="gdata\tb_env.h">
+      <Filter>gdata</Filter>
+    </ClInclude>
+    <ClInclude Include="gdata\tb_map.h">
+      <Filter>gdata</Filter>
+    </ClInclude>
+    <ClInclude Include="gdata\tb_parsing.h">
+      <Filter>gdata</Filter>
+    </ClInclude>
+    <ClInclude Include="gdata\tb_serialize.h">
+      <Filter>gdata</Filter>
+    </ClInclude>
+    <ClInclude Include="gdata\tb_vector_cs.h">
+      <Filter>gdata</Filter>
+    </ClInclude>
+    <ClInclude Include="tsys\cross_sys.h">
+      <Filter>sys</Filter>
+    </ClInclude>
+    <ClInclude Include="tsys\sys_mutex.h">
+      <Filter>sys</Filter>
+    </ClInclude>
+    <ClInclude Include="tsys\sys_resource.h">
+      <Filter>sys</Filter>
+    </ClInclude>
+    <ClInclude Include="tsys\systime.h">
+      <Filter>sys</Filter>
+    </ClInclude>
+    <ClInclude Include="tsys\tb_log.h">
+      <Filter>sys</Filter>
+    </ClInclude>
+    <ClInclude Include="tsys\tb_net.h">
+      <Filter>sys</Filter>
+    </ClInclude>
+    <ClInclude Include="tsys\tb_service.h">
+      <Filter>sys</Filter>
+    </ClInclude>
+    <ClInclude Include="tsys\tb_ssockets.h">
+      <Filter>sys</Filter>
+    </ClInclude>
+    <ClInclude Include="tsys\tb_sysdecls.h">
+      <Filter>sys</Filter>
+    </ClInclude>
+    <ClInclude Include="tsys\tb_sysfun.h">
+      <Filter>sys</Filter>
+    </ClInclude>
+    <ClInclude Include="tsys\tbfiles.h">
+      <Filter>sys</Filter>
+    </ClInclude>
+    <ClInclude Include="parse\tb_dfa.h">
+      <Filter>parse</Filter>
+    </ClInclude>
+    <ClInclude Include="gdata\t_tools.h">
+      <Filter>gdata</Filter>
+    </ClInclude>
+    <ClInclude Include="parse\t_path.h">
+      <Filter>parse</Filter>
+    </ClInclude>
+    <ClInclude Include="tsys\tb_process.h">
+      <Filter>sys</Filter>
+    </ClInclude>
+    <ClInclude Include="gdata\tests\t_tests.h">
+      <Filter>gdata\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="conf\conf_variant.h">
+      <Filter>conf</Filter>
+    </ClInclude>
+    <ClInclude Include="conf\tbcfg_parse.h">
+      <Filter>conf</Filter>
+    </ClInclude>
+    <ClInclude Include="parse\t_parse.h">
+      <Filter>parse</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="tblib.todolist.txt" />
+  </ItemGroup>
+</Project>
