@@ -25,6 +25,6 @@
 Тестирование реализованно в отдельном проекте (test\test_tblib). Этот проект включен в файлы tblib.sln и CMakeLists.txt. Для тестирования использовалась среда msvs 2019. Для linux тестирование проводилось под  msvs2019 и VSL 
 
 Базовые типы данных
-- Строки. Тип данных rc_string<> . Декларирована в файле gdata/t_string.h
-- Массивы. Тип данных rc_array<> . Декларирована в файле gdata/t_array.h
-- Варианты. Типы данных conf_variant, conf_struct_t . Обявление в файле conf/conf_variant.h
+- Строки. Тип данных rc_string<> . Объявление в файле gdata/t_string.h
+- Массивы. Тип данных rc_array<> . Объявление в файле gdata/t_array.h
+- Варианты. Типы данных conf_variant, conf_struct_t . Объявление в файле conf/conf_variant.h
