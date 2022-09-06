@@ -102,12 +102,21 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(IncludePath)</IncludePath>
+    <IncludePath>.;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>.;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>.;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='static|Win32'">
+    <IncludePath>.;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>.;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='static|x64'">
     <IncludePath>.;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -119,6 +128,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ConformanceMode>Default</ConformanceMode>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -255,6 +265,7 @@
     <ClCompile Include="gdata\t_string.cpp" />
     <ClCompile Include="parse\tb_dfa.cpp" />
     <ClCompile Include="parse\t_parse.cpp" />
+    <ClCompile Include="tbsync\sync.cpp" />
     <ClCompile Include="tsys\cross_sys.cpp" />
     <ClCompile Include="tsys\systime.cpp" />
     <ClCompile Include="tsys\tbfiles.cpp" />
@@ -304,6 +315,7 @@
     <ClInclude Include="parse\tb_dfa.h" />
     <ClInclude Include="parse\t_parse.h" />
     <ClInclude Include="parse\t_path.h" />
+    <ClInclude Include="tbsync\sync.h" />
     <ClInclude Include="tb_basetypes.h" />
     <ClInclude Include="tb_exception_base.h" />
     <ClInclude Include="tsys\cross_sys.h" />

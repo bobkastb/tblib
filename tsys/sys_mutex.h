@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 //void __tmp_mutex_l( int lock , int index );
 
 #define MakeAutoVarName___2( nm , suff ) nm##suff 
@@ -29,8 +29,8 @@ public:
 
 
 class entrleave_scope_real {
-	// здесь параметр шаблоне не важен т.к. не влияет на размер
-	// класса (там указатель на тип параметра шаблона)
+	// Р·РґРµСЃСЊ РїР°СЂР°РјРµС‚СЂ С€Р°Р±Р»РѕРЅРµ РЅРµ РІР°Р¶РµРЅ С‚.Рє. РЅРµ РІР»РёСЏРµС‚ РЅР° СЂР°Р·РјРµСЂ
+	// РєР»Р°СЃСЃР° (С‚Р°Рј СѓРєР°Р·Р°С‚РµР»СЊ РЅР° С‚РёРї РїР°СЂР°РјРµС‚СЂР° С€Р°Р±Р»РѕРЅР°)
 	char buff[sizeof(entrleave_scope<entrleave_scope_base>)];
 	template <typename t_loc>	void init(t_loc * aloc) {new (buff) entrleave_scope<t_loc>(*aloc);}
 public:
@@ -52,8 +52,8 @@ public:
 	sys_mutex_base(){};
 	~sys_mutex_base(){};
 private:
-	sys_mutex_base(const sys_mutex_base & s) {}; // копирование запрещено
-	sys_mutex_base & operator = (const sys_mutex_base & s) { return *this;}; // копирование запрещено
+	sys_mutex_base(const sys_mutex_base & s) {}; // РєРѕРїРёСЂРѕРІР°РЅРёРµ Р·Р°РїСЂРµС‰РµРЅРѕ
+	sys_mutex_base & operator = (const sys_mutex_base & s) { return *this;}; // РєРѕРїРёСЂРѕРІР°РЅРёРµ Р·Р°РїСЂРµС‰РµРЅРѕ
 };
 struct sys_mutex: public sys_mutex_base{ 
 	sys_mutex();

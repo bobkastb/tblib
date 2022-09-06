@@ -2,43 +2,13 @@
 //
 
 #include <iostream>
+#include "gdata/t_string.h"
 
-union Utype{
-    struct { int16_t X,Y,Z,F; };
-    uint64_t ll;
-};
-
-struct Utype2 {
-    int x;
-    int y;
-    char y1;
-    int16_t u;
-
-};
-
-void test(){
-    Utype x;
-    x.F = 1 ; x.X=1;
-    auto l = x.ll;
-    auto L = x.X | (uint64_t(x.Y) < 16) | (uint64_t(x.Z) < 32) | (uint64_t(x.F) < 48);
-    x.X = L & 0xFFFF;
-    x.Y = (L>>16) & 0xFFFF;
-}
-
-template<size_t N> void testa( char (&v)[N] ) {
-    auto u = N;
-    v[1] = 100;
-    std::cout << N;
-}
-
+void mainsync_test();
+void mainsync_test1();
 int main()
 {
-
-    std::string xx="rrrr";
-    std::cout << "Hello World!\n";
-    char d[200];
-    testa(d);
-    test();
+	mainsync_test1();
 
 }
 

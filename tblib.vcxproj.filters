@@ -40,6 +40,9 @@
     <Filter Include="gdata\tests">
       <UniqueIdentifier>{18823094-0dfb-46ba-a2bd-5a0b43a4d7c4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="tbsync">
+      <UniqueIdentifier>{4e8a50a6-f046-47e9-86ad-ca7f95641bcc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
@@ -176,6 +179,9 @@
     </ClCompile>
     <ClCompile Include="conf\conf_based.cpp">
       <Filter>conf</Filter>
+    </ClCompile>
+    <ClCompile Include="tbsync\sync.cpp">
+      <Filter>tbsync</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -331,6 +337,9 @@
     </ClInclude>
     <ClInclude Include="parse\t_parse.h">
       <Filter>parse</Filter>
+    </ClInclude>
+    <ClInclude Include="tbsync\sync.h">
+      <Filter>tbsync</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

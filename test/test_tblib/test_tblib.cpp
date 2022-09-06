@@ -118,6 +118,7 @@ static int call_test_proc(bool stoponerr) {
 
 int main()
 {
+
     tbgeneral::setconsoleCP_utf8();
     std::cout << "Start testing!\n";
     //auto stoponerr = true;
